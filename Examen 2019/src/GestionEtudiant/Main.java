@@ -19,6 +19,8 @@ public class Main {
 		else {
 			System.out.println("Tey aren't the same student");
 		}
+		
+		
 	}
 
 }
