@@ -15,14 +15,29 @@ public class Etudiant {
 	//Redéfinition de la méthode toString:
 	@Override
 	public String toString() {
-		return "NOM - "+nom+" Note - "+note ;
+		return "NOM - "+nom+" - Note - "+note ;
 	}
 	
 	//Redefinition de ma méthode equals:
 	@Override
 	public boolean equals(Object obj) {
-		if(! obj instanceof Etudiant.class) {
-			
+		// If the object is compared with itself then return true
+		if(obj == this) {
+			return true;
+		}
+		 /* Check if obj is an instance of Complex or not
+        "null instanceof [type]" also returns false */
+		if(!(obj instanceof Etudiant)) {
+			return false;
+		}
+		Etudiant student = (Etudiant) obj;
+		if(student.id==id) {
+			return true;
+		}
+		else{
+			return false;
 		}
 	}
+	
+	
 }
