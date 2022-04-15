@@ -1,6 +1,6 @@
 package GestionEtudiant;
 
-public class Etudiant {
+public class Etudiant implements Comparable<Etudiant> {
 	private int id;
 	private String nom;
 	private double note;
@@ -39,5 +39,16 @@ public class Etudiant {
 		}
 	}
 	
+	@Override
+	public int compareTo(Etudiant e) {
+		if(this.note>e.note) {
+			return 1;
+		}
+		if(this.note==e.note) {
+			return 0;
+		}
+		else
+			return -1;
+	}
 	
 }
