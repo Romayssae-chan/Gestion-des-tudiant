@@ -25,7 +25,10 @@ public class ListEtudiants extends ArrayList<Etudiant> implements Condition {
 	
 	@Override
 	public boolean estVrai(Etudiant e) {
-		
+		if(e.getNote()>13)
+		{
+			return true;
+		}
 		return false;
 	}
 	

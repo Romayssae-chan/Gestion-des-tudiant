@@ -41,6 +41,18 @@ public class Main {
 		System.out.println("Affichage"+mesEtudiants);
 		
 		
-	}
+		mesEtudiants=((ListEtudiants) mesEtudiants).filtrer(new Condition() {
+			@Override
+			public boolean estVrai(Etudiant e) {
+				if(e.getNote()>13)
+				{
+					return true;
+				}
+				return false;
+			}
 
+		});
+		System.out.println("Affichage"+mesEtudiants);
+
+	}
 }
