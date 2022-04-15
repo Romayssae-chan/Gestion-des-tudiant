@@ -28,10 +28,12 @@ public class Main {
 		e3.setNote(16);
 		
 		//Créer la liste des étudiants:
-		List <ListEtudiants> mesEtudiants =new ArrayList<>();
+		List <Etudiant> mesEtudiants =new ListEtudiants();
 		mesEtudiants.add(e1);
 		mesEtudiants.add(e2);
 		mesEtudiants.add(e3);
+		
+		System.out.println("Affichage"+mesEtudiants);
 		
 		
 		

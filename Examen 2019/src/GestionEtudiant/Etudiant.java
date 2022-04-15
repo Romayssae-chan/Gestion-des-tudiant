@@ -12,10 +12,26 @@ public class Etudiant implements Comparable<Etudiant> {
 		this.note=10;
 	}
 	
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
+	public String getNom() {
+		return nom;
+	}
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+
 	public double getNote() {
 		return note;
 	}
-
 	public void setNote(double note) {
 		this.note = note;
 	}
