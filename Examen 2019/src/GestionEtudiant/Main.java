@@ -1,6 +1,7 @@
 package GestionEtudiant;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Main {
@@ -35,6 +36,9 @@ public class Main {
 		
 		System.out.println("Affichage"+mesEtudiants);
 		
+		//Affichage colllection.sort()
+		Collections.sort(mesEtudiants);
+		System.out.println("Affichage"+mesEtudiants);
 		
 		
 	}
