@@ -3,7 +3,7 @@ package GestionEtudiant;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListEtudiants extends ArrayList<Etudiant> {
+public class ListEtudiants extends ArrayList<Etudiant> implements Condition {
 	
 	@Override
 	public boolean add(Etudiant e) {
@@ -23,8 +23,22 @@ public class ListEtudiants extends ArrayList<Etudiant> {
 			return super.add(e);
 	}
 	
-	public List<Etudiant> filtrer(Condition c){
+	@Override
+	public boolean estVrai(Etudiant e) {
 		
-		return null;	
+		return false;
 	}
+	
+	/*	Définir la fonction filtrer qui permet de retourner toutes les Etdudiants
+	   qui satisfaits la condition c */
+	public List<Etudiant> filtrer(Condition c){
+		List <Etudiant> lista=new ListEtudiants();
+		for (Etudiant e:this) {
+			if(c.estVrai(e)==true) {
+				lista.add(e);
+			}
+		}
+		return lista;
+	}
+	
 }
